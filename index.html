@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weekly Tracker Homepage</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Weekly Tracker</h1>
+    </header>
+
+    <div class="container">
+        <!-- Exercise Template -->
+        <div class="template exercise-template" style="background-image: url('background images/Exercise - Background image.jpg');" onclick="toggleSubTemplates('exercise')">
+            <h3>Exercise</h3>
+        </div>
+
+        <!-- Meal Template -->
+        <div class="template" style="background-image: url('background images/Meal - background image.jpg');" onclick="showImage('images/Meals - All months.png')">
+            <h3>Meal</h3>
+        </div>
+
+        <!-- Overall Health Template -->
+        <div class="template" style="background-image: url('background images/Overall Health - Background image.jpg');" onclick="showImage('images/Overall Health - All months.png')">
+            <h3>Overall Health</h3>
+        </div>
+
+        <!-- Social Skill Template -->
+        <div class="template" style="background-image: url('background images/Social skill - background image.jpg');" onclick="toggleSubTemplates('socialSkill')">
+            <h3>Social Skill</h3>
+        </div>
+    </div>
+
+    <!-- Sub-Templates for Exercise -->
+    <div id="exerciseSubTemplates" class="sub-templates-container" style="display: none;">
+        <div class="sub-template" style="background-image: url('images/MAR-APR-MAY-bg.jpg');" onclick="showImage('images/Exercise - Mar-apr-may.png')">
+            <h3>MAR-APR-MAY</h3>
+        </div>
+        <div class="sub-template" style="background-image: url('images/JUN-JULY-AUG-bg.jpg');" onclick="showImage('images/Exercise - Jun-jul-aug.png')">
+            <h3>JUN-JUL-AUG</h3>
+        </div>
+        <div class="sub-template" style="background-image: url('images/SEP-OCT-NOV-bg.jpg');" onclick="showImage('images/Exercise - sep-oct-nov.png')">
+            <h3>SEP-OCT-NOV</h3>
+        </div>
+        <div class="sub-template" style="background-image: url('images/DEC-bg.jpg');" onclick="showImage('images/Exercise - Dec.png')">
+            <h3>DEC</h3>
+        </div>
+    </div>
+
+    <!-- Sub-Templates for Social Skill -->
+    <div id="socialSkillSubTemplates" class="sub-templates-container" style="display: none;">
+        <div class="sub-template" style="background-image: url('images/March-SS.jpg');" onclick="showImage('images/Week plan - March.png')">
+            <h3>March</h3>
+        </div>
+        <div class="sub-template" style="background-image: url('images/April-SS.jpg');" onclick="showImage('images/Week plan - April.png')">
+            <h3>April</h3>
+        </div>
+        <div class="sub-template" style="background-image: url('images/May-SS.jpg');" onclick="showImage('images/Week plan - May.png')">
+            <h3>May</h3>
+        </div>
+        <div class="sub-template" style="background-image: url('images/June-SS.jpg');" onclick="showImage('images/Week plan - June.png')">
+            <h3>June</h3>
+        </div>
+        <div class="sub-template" style="background-image: url('images/July-SS.jpg');" onclick="showImage('images/Week plan - July.png')">
+            <h3>July</h3>
+        </div>
+        <div class="sub-template" style="background-image: url('images/August-SS.jpg');" onclick="showImage('images/Week plan - August.png')">
+            <h3>August</h3>
+        </div>
+        <div class="sub-template" style="background-image: url('images/September-SS.jpg');" onclick="showImage('images/Week plan - September.png')">
+            <h3>September</h3>
+        </div>
+        <div class="sub-template" style="background-image: url('images/October-SS.png');" onclick="showImage('images/Week plan - October.png')">
+            <h3>October</h3>
+        </div>
+        <div class="sub-template" style="background-image: url('images/November-SS.jpg');" onclick="showImage('images/Week plan - November.png')">
+            <h3>November</h3>
+        </div>
+        <div class="sub-template" style="background-image: url('images/December-SS.jpg');" onclick="showImage('images/Week plan - December.png')">
+            <h3>December</h3>
+        </div>
+    </div>
+
+    <!-- Modal for displaying images -->
+    <div id="exerciseModal" class="modal">
+        <div class="modal-content">
+            <span class="close-modal" onclick="closeExerciseModal()">&times;</span>
+            <img id="exerciseImage" src="" alt="Exercise Image">
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2025 Weekly Tracker</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
